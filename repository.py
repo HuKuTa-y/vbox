@@ -19,8 +19,6 @@ class FlightRepository:
                         (plane,price)
                         VALUES (%s,%s)
             ''',(flight.plane,flight.price))
-        result = cursor.fetchone()
-        flight.id = result[0]
         conn.commit()
 
         cursor.close()
@@ -101,4 +99,3 @@ class FlightRepository:
         conn.close()
 
         return deleted >0
-
