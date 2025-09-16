@@ -23,4 +23,3 @@ class MigrationManager:
         #Deinitialize
         cursor.close()
         conn.close()
-
